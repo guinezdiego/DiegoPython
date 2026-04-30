@@ -85,4 +85,3 @@
 # def promedio():
 #     n_notas = int(input("Ingrese el numero de notas"))
 #     suma = 0
-
