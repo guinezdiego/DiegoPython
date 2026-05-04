@@ -75,10 +75,70 @@
 # Muestra el nombre completo
 # Ej: "Diego Guiñez"
 
-nombre = input("Ingrese su nombre: ")
-apellido = input("Ingrese su apellido: ")
+# nombre = input("Ingrese su nombre: ")
+# apellido = input("Ingrese su apellido: ")
 
-nombre = nombre.capitalize()
-apellido = apellido.capitalize()
+# nombre = nombre.capitalize()
+# apellido = apellido.capitalize()
 
-print(nombre, apellido)
+# print(nombre, apellido)
+
+# for i in range(10):
+#     print("Hola")
+
+# edad = int(input("Ingrese su edad: "))
+
+# if edad >= 18:
+#     print("Eres mayor de edad")
+# elif edad < 18 and edad > 0:
+#     print("Eres menor de edad")
+# else:
+#     print("Edad invalida")
+
+# color = input("Ingrese un color: ")
+
+# if color == "rojo":
+#     print("No cruces")
+# elif color == "amarillo":
+#     print("Apresurate")
+# elif color == "verde":
+#     print("Puedes pasar")
+# else:
+#     print("Color invalido")
+
+# op = 0
+# total = 0
+
+# while op != 5:
+#     print("1.- Pera $1000")
+#     print("2.- Melon $4000")
+#     print("3.- Sandia $3000")
+#     print("4.- Uvas $1500")
+#     print("5.- Salir")
+#     op = int(input("Elija una fruta: "))
+#     match op:
+#         case 1:
+#             print("Usted compro Pera")
+#             total += 1000
+#         case 2:
+#             print("Usted compro Melon")
+#             total += 4000
+#         case 3:
+#             print("Usted compro Sandia")
+#             total += 3000
+#         case 4:
+#             print("Usted compro Uva")
+#             total += 1500
+#         case 5:
+#             print("Saliendo del sistema")
+#         case _:
+#             print("Opcion invalida")
+# print("El total a pagar es:", total)
+
+# nombre = input("Ingrese su nombre: ")
+# print(nombre.capitalize())
+
+# pedirle al usuario una clave
+# Si la clave es igual a la password
+# Que le muestre bienvenido
+# Si no que le muestre contraseña incorrecta
