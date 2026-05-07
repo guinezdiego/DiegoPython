@@ -181,31 +181,33 @@ import time
 # e ir restandole un golpe por cada turno
 # el valor del golpe debe estar entre 7 y 15
 
-# j1 = "Alacran"
-# j2 = "Subcerro"
-# vida_j1 = 100
-# vida_j2 = 100
-# turno = 1
-# barra1 = "=" * vida_j1
-# barra2 = "=" * vida_j2
-# while vida_j1 > 0 and vida_j2 > 0:
-#     golpe1 = random.randint(7,15)
-#     golpe2 = random.randint(7,15)
-#     if turno % 2 == 0:
-#         print("Turno de Subcerro")
-#         vida_j1 = max(0, vida_j1 - golpe2)
-#         barra1 = "=" * vida_j1
-#         print(f"{j2} le quita {golpe2} a {j1}, vida restante: {vida_j1} {barra1}")
-#         turno -= 1
-#         time.sleep(1)
-#     else:
-#         print("Turno de Alacran")
-#         vida_j2 = max(0, vida_j2 - golpe1)
-#         barra2 = "=" * vida_j2
-#         print(f"{j1} le quita {golpe1} a {j2}, vida restante: {vida_j2} {barra2}")
-#         turno += 1
-#         time.sleep(1)
-# if vida_j1 > vida_j2:
-#     print(f"Alacran gana la batalla, con una vida restante de: {vida_j1} {barra1}")
-# else:
-#     print(f"Subcerro gana la batalla, con una vida restante de: {vida_j2} {barra2}")
+j1 = "Alacran"
+j2 = "Subcerro"
+vida_j1 = 100
+vida_j2 = 100
+turno = 1
+barra1 = "=" * vida_j1
+barra2 = "=" * vida_j2
+while vida_j1 > 0 and vida_j2 > 0:
+    golpe1 = random.randint(7,15)
+    golpe2 = random.randint(7,15)
+    if turno % 2 == 0:
+        print("Turno de Subcerro")
+        time.sleep(1)
+        vida_j1 = max(0, vida_j1 - golpe2)
+        barra1 = "=" * vida_j1
+        print(f"{j2} le quita {golpe2} a {j1}, vida restante: {vida_j1} {barra1}")
+        turno -= 1
+        time.sleep(2)
+    else:
+        print("Turno de Alacran")
+        time.sleep(1)
+        vida_j2 = max(0, vida_j2 - golpe1)
+        barra2 = "=" * vida_j2
+        print(f"{j1} le quita {golpe1} a {j2}, vida restante: {vida_j2} {barra2}")
+        turno += 1
+        time.sleep(2)
+if vida_j1 > vida_j2:
+    print(f"Alacran gana la batalla, con una vida restante de: {vida_j1} {barra1}")
+else:
+    print(f"Subcerro gana la batalla, con una vida restante de: {vida_j2} {barra2}")
