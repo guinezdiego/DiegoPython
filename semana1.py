@@ -102,3 +102,146 @@
 # print(f"El total de la division es: {num1 / num2}")
 # print(f"El total de la potencia es: {num1 ** num2}")
 
+# Dia 2
+
+# Ejercicio 1
+
+# num = int(input("Ingrese un numero: "))
+
+# if num < 0:
+#     print("Es negativo")
+# elif num > 0:
+#     print("Es positivo")
+# else:
+#     print("Es cero")
+
+# Ejercicio 2
+
+# nota = float(input("Ingrese su nota: "))
+
+# if nota >= 6 and nota <= 7:
+#     print("Excelente")
+# elif nota >= 5 and nota < 6:
+#     print("Bueno")
+# elif nota >= 4 and nota < 5:
+#     print("Relugar")
+# elif nota >= 1 and nota < 4:
+#     print("Reprobado")
+# else:
+#     print("Nota invalida")
+
+# Ejercicio 3
+
+# password = "Hoplita3119"
+
+# clave = input("Ingrese la contraseña: ")
+
+# while password != clave:
+#     print("Contraseña incorrecta, intente denuevo")
+#     clave = input("Ingrese la contraseña: ")
+
+# print("Bienvenido")
+
+# Ejercicio 4
+
+# cont = 1
+
+# while cont <= 20:
+#     print(cont)
+#     cont += 1
+
+# Ejercicio 5
+
+# suma_total = 0
+# num = 1
+
+# while num != 0:
+#     num = int(input("Ingrese un numero: "))
+#     suma_total += num
+# print(f"La suma total de los numeros es: {suma_total}")
+
+# mini desafio
+
+# op = 0
+
+# while op != 5:
+#     print("1.- Sumar")
+#     print("2.- Restar")
+#     print("3.- Multiplicar")
+#     print("4.- Dividir")
+#     print("5.- Salir")
+#     op = int(input("Ingrese su opcion: "))
+#     if op == 1:
+#         n1 = int(input("Ingrese un numero: "))
+#         n2 = int(input("Ingrese otro numero: "))
+#         suma = n1 + n2
+#         print(f"El total de la suma es {suma}")
+#     elif op == 2:
+#         n1 = int(input("Ingrese un numero: "))
+#         n2 = int(input("Ingrese otro numero: "))
+#         resta = n1 - n2
+#         print(f"El total de la resta es: {resta}")
+#     elif op == 3:
+#         n1 = int(input("Ingrese un numero: "))
+#         n2 = int(input("Ingrese otro numero: "))
+#         multi = n1 * n2
+#         print(f"El total de la multiplicacion es: {multi}")
+#     elif op == 4:
+#         n1 = int(input("Ingrese un numero: "))
+#         n2 = int(input("Ingrese otro numero: "))
+#         while n2 == 0:
+#             print("No se puede dividir por 0")
+#             n2 = int(input("Ingrese otro numero: "))
+#         division = n1 / n2
+#         print(f"El total de la disivion es: {division}")
+#     elif op == 5:
+#         print("Saliendo del sistema")
+#     else:
+#         print("Opcion invalida")
+
+# Mini prueba
+# Pregunta 1
+
+# cont = 1
+# num = int(input("Ingrese un numero: "))
+
+# while cont <= 10:
+#     print(f"{num} x {cont} = {num * cont}")
+#     cont += 1
+
+# Pregunta 2
+
+# clave = "admin123"
+# password = input("Ingrese la contraseña: ")
+
+# while password != clave:
+#     print("Contraseña incorrecta")
+#     password = input("Ingrese la contraseña: ")
+
+# print("Bienvenido")
+
+# Reto final del dia
+
+# saldo = 100000
+# op = 0
+
+# while op != 4:
+#     print("1.- Ver Saldo")
+#     print("2.- Depositar")
+#     print("3.- Retirar")
+#     print("4.- Salir")
+#     op = int(input("Ingrese su opcion: "))
+#     if op == 1:
+#         print(f"Su saldo total es: {saldo}")
+#     elif op == 2:
+#         deposito = int(input("Ingrese monto a depositar: "))
+#         saldo += deposito
+#         print(f"Su saldo actual es de: {saldo}")
+#     elif op == 3:
+#         retiro = int(input("Ingrese monto a retirar: "))
+#         saldo -= retiro
+#         print(f"Su saldo actual es de: {saldo}")
+#     elif op == 4:
+#         print("Saliendo del sistema")
+#     else:
+#         print("Opcion invalida")
