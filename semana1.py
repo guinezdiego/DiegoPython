@@ -245,3 +245,141 @@
 #         print("Saliendo del sistema")
 #     else:
 #         print("Opcion invalida")
+
+# Dia 3
+# Ejercicio 1
+
+# for i in range(1, 101):
+#     if i % 2 == 0:
+#         print(i)
+
+# Ejercicio 2
+
+# suma_total = 0
+
+# for i in range(5):
+#     num = int(input("Ingrese un numero: "))
+#     suma_total += num
+#     promedio = suma_total / 5
+# print(f"El promedio total es: {promedio}")
+
+# Ejercicio 3
+
+# mayor = int(input("Ingrese un numero: "))
+
+# for i in range(9):
+#     num = int(input("Ingrese un numero: "))
+#     if num > mayor:
+#         mayor = num
+# print(f"El numero mayor es {mayor}")
+
+# Ejercicio 4
+
+# num = int(input("Ingrese un numero: "))
+
+# for i in range(1, 11):
+#     print(f"{num} x {i} = {num * i}")
+
+# Ejercicio 5
+
+# simbolo = "*"
+
+# for i in range(1, 6):
+#     print(simbolo * i)
+
+# Mini desafio
+
+# m_alumno = " "
+# p_alumno = " "
+# total = 0
+# m_nota = 0
+# p_nota = 7
+# c_alumnos = int(input("Ingrese la cantidad de alumnos: "))
+
+# for i in range(c_alumnos):
+#     nombre = input("Ingrese su nombre: ")
+#     promedio = float(input("Ingrese su promedio: "))
+#     total += promedio
+#     if promedio > m_nota:
+#         m_nota = promedio
+#         m_alumno = nombre
+#     if promedio < p_nota:
+#         p_nota = promedio
+#         p_alumno = nombre
+    
+# promedio_g = total / c_alumnos
+# print(f"El promedio general es: {promedio_g}")
+# print(f"El mejor alumno fue {m_alumno} con un promedio de: {m_nota}")
+# print(f"El peor alumno fue: {p_alumno} con un promedio de: {p_nota}")
+
+# Mini prueba
+# Pregunta 1
+
+# n_pares = 0
+# n_impares = 0
+
+# for i in range(1, 8):
+#     num = int(input("Ingrese un numero: "))
+#     if num % 2 == 0:
+#         n_pares += 1
+#     else:
+#         n_impares += 1
+
+# print(f"El total de numeros pares fue: {n_pares}")
+# print(f"El total de numeros impares fue: {n_impares}")
+
+# Pregunta 2
+
+# suma_total = 0
+# num = 0
+# n_ingresados = -1
+
+# while num != -1:
+#     num = int(input("Ingrese un numero: "))
+#     suma_total += num
+#     n_ingresados += 1
+    
+# promedio = suma_total / n_ingresados
+# print(f"La suma total es: {suma_total}")
+# print(f"EL promedio de los numeros es: {promedio}")
+
+# Pregunta 3
+
+# simbolo = "*"
+
+# for i in range(5, 0, -1):
+#     print(simbolo * i)
+
+# Reto final del dia
+
+# c_alumnos = int(input("Ingrese la cantidad de alumnos: "))
+# m_promedio = 0
+# p_promedio = 7
+# m_alumno = " "
+# p_alumno = " "
+# suma_total = 0
+
+# for i in range(c_alumnos):
+#     suma = 0
+#     nombre = input("Ingrese su nombre: ")
+#     for i in range(3):
+#         nota = float(input("Ingrese su nota: "))
+#         suma += nota
+#         promedio = suma / 3
+#         suma_total += promedio
+#     if promedio > m_promedio:
+#         m_promedio = promedio
+#         m_alumno = nombre
+#     if promedio < p_promedio:
+#         p_promedio = promedio
+#         p_alumno = nombre
+#     if promedio >= 4:
+#         print(f"Tu promedio es: {promedio}, aprobado")
+#     else:
+#         print(f"Tu promedio es: {promedio}, reprobado")
+
+# promedio_g = suma_total / c_alumnos
+# print(f"El promedio general del curso es: {promedio_g}")
+# print(f"EL mejor promedio fue: {m_promedio}, del alumno {m_alumno}")
+# print(f"El peor promedio fue: {p_promedio}, del alumno {p_alumno}")
+            
