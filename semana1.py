@@ -582,4 +582,251 @@
 # print(f"El numero de reprobados fue: {reprobados}")
 # print(f"El mejor alumno fue: {m_alumno} con un promedio de: {round(m_promedio, 1)}")
 # print(f"El peor alumno fue: {p_alumno} con un promedio de: {round(p_promedio, 1)}")
-# print(f"El promedio general es: {round(promedio_g, 1)}")       
+# print(f"El promedio general es: {round(promedio_g, 1)}")
+
+# Dia 5
+
+# def cuadrado(num):
+#     return num * num
+
+# resultado = cuadrado(4)
+
+# print(resultado)
+
+# Ejercicio 1
+
+# def saludar(nombre):
+#     print(f"Hola {nombre}")
+
+# saludar("Diego")
+
+# Ejercicio 2
+
+# def sumar(a, b):
+#     return a + b
+
+# suma = sumar(5, 15)
+
+# print(f"La suma total es {suma}")
+
+# Ejercicio 3
+
+# def mayor(a, b):
+#     if a > b:
+#         return a
+#     else:
+#         return b
+    
+# el_mayor = mayor(5, 7)
+
+# print(f"El numero mayor es: {el_mayor}")
+
+# Ejercicio 4
+
+# def tabla(numero):
+#     for i in range(1, 11):
+#         print(f"{numero} x {i} = {numero * i}")
+
+# tabla(5)
+
+# Ejercicio 5
+
+# def promedios(lista):
+#     suma = 0
+    
+#     for i in lista:
+#         suma += i
+    
+#     return suma / len(lista)
+
+# notas = [6, 7, 6, 7]
+# promedio = promedios(notas)
+
+# print(f"El promedio total es {round(promedio, 1)}")
+
+# Mini desafio
+
+# def sumar():
+#     n1 = int(input("Ingrese un numero: "))
+#     n2 = int(input("Ingrese otro numero: "))
+#     suma = n1 + n2
+#     print(f"El total de la suma es: {suma}")
+
+# def restar():
+#     n1 = int(input("Ingrese un numero: "))
+#     n2 = int(input("Ingrese otro numero: "))
+#     resta = n1 - n2
+#     print(f"El total de la resta es: {resta}")
+
+# def multiplicar():
+#     n1 = int(input("Ingrese un numero: "))
+#     n2 = int(input("Ingrese otro numero: "))
+#     multi = n1 * n2
+#     print(f"El total de la multiplicacion es: {multi}")
+
+# def dividir():
+#     n1 = int(input("Ingrese un numero: "))
+#     n2 = int(input("Ingrese otro numero: "))
+    
+#     while n2 == 0:
+#         print("No se puede dividir por 0")
+#         n2 = int(input("Ingrese otro numero: "))
+    
+#     division = n1 / n2
+#     print(f"El total de la division es: {round(division, 1)}")
+    
+# def calculadora():
+#     op = 0
+    
+#     while op != 5:
+#         print("1.- Sumar")
+#         print("2.- Restar")
+#         print("3.- Multiplicar")
+#         print("4.- Dividir")
+#         print("5.- Salir")
+#         op = int(input("Ingrese su opcion: "))
+        
+#         match op:
+#             case 1:
+#                 sumar()
+#             case 2:
+#                 restar()
+#             case 3:
+#                 multiplicar()
+#             case 4:
+#                 dividir()
+#             case 5:
+#                 print("Saliendo del sistema")
+#             case _:
+#                 print("Opcion invalida")
+
+# calculadora()
+
+# Mini prueba
+# Pregunta 1
+
+# def par_o_impar():
+#     num = int(input("Ingrese un numero: "))
+    
+#     if num % 2 == 0:
+#         print("Par")
+#     else:
+#         print("Impar")
+
+# par_o_impar()
+
+# Pregunta 2
+
+# def mayor_lista(lista):
+#     mayor = 0
+#     menor = 999
+    
+#     for i in lista:
+#         if i > mayor:
+#             mayor = i
+        
+#         if i < menor:
+#             menor = i
+    
+#     print(f"El numero mayor es {mayor}")
+#     print(f"El numero menor es: {menor}")
+
+# numeros = [10, 12, 18, 30, 24]
+
+# mayor_lista(numeros)
+
+# Pregunta 3
+
+# def contar_vocales():
+#     n_vocales = 0
+#     n_conso = 0
+#     palabra = input("Ingrese una palabra: ")
+    
+#     for i in palabra:
+#         if i in "AEIOUaeiou":
+#             n_vocales += 1
+#         else:
+#             n_conso += 1
+    
+#     print(f"La cantidad de vocales son: {n_vocales}")
+#     print(f"El total de consonantes es: {n_conso}")
+
+# contar_vocales()
+
+# Reto final del dia
+
+# def pedir_notas():
+#     cantidad = int(input("Ingrese la cantidad de notas: "))
+#     return cantidad
+    
+# def calcular_promedio(cantidad):
+#     suma = 0
+    
+#     for i in range(cantidad):
+#         nota = float(input("Ingrese su nota: "))
+#         suma += nota
+    
+#     promedio = suma / cantidad
+    
+#     return promedio
+
+# def estado(promedio):
+#     if promedio >= 4:
+#         return "Aprobado"
+#     else:
+#         return "Reprobado"
+
+# def mejor_alumno(nombres, promedios):
+#     mejor = promedios[0]
+#     alumno = nombres[0]
+    
+#     for i in range(len(promedios)):
+#         if promedios[i] > mejor:
+#             mejor = promedios[0]
+#             alumno = nombres[0]
+        
+#     return alumno, mejor
+    
+# def peor_alumno(nombres, promedios):
+#     peor = promedios[0]
+#     alumno = nombres[0]
+    
+#     for i in range(len(promedios)):
+#         if promedios[i] < peor:
+#             peor = promedios[i]
+#             alumno = nombres[i]
+            
+#     return alumno, peor
+
+# def promedio_general(promedios):
+#     suma = 0
+    
+#     for promedio in promedios:
+#         suma += promedio
+    
+#     return suma / len(promedios)
+
+# nombres = []
+# promedios = []
+
+# cantidad_alumnos = int(input("Ingrese la cantidad de alumnos: "))
+
+# for i in range(cantidad_alumnos):
+#     nombre = input("Ingrese el nombre del alumno: ")
+#     nombres.append(nombre)
+#     cantidad_notas = pedir_notas()
+#     promedio = calcular_promedio(cantidad_notas)
+#     promedios.append(promedio)
+    
+#     print(f"{nombre} tiene promedio {round(promedio, 1)}")
+#     print(estado(promedio))
+#     print("-" * 30)
+    
+# mejor_nombre, mejor_prom = mejor_alumno(nombres, promedios)
+# peor_nombre, peor_prom = peor_alumno(nombres, promedios)
+# promedio_curso = promedio_general(promedios)
+
+# print("===== RESULTADOS FINALES =====")
+# print(f"Mejor alumno: {mejor_nombre} con promedio {round(mejor_prom, 1)}")
+# print(f"Peor alumno: {peor_nombre} con promedio {round(peor_prom, 1)}")
+# print(f"Promedio general del curso: {round(promedio_curso, 1)}")
