@@ -830,3 +830,193 @@
 # print(f"Mejor alumno: {mejor_nombre} con promedio {round(mejor_prom, 1)}")
 # print(f"Peor alumno: {peor_nombre} con promedio {round(peor_prom, 1)}")
 # print(f"Promedio general del curso: {round(promedio_curso, 1)}")
+
+# Dia 6
+# Ejercicio 1
+
+# alumno = {
+#     "nombre": "Diego",
+#     "edad": 20,
+#     "carrera": "Informatica"
+# }
+# alumno["promedio"] = 6.9
+
+# print(alumno.get("nombre"))
+# print(alumno.get("edad"))
+# print(alumno.get("carrera"))
+# print(alumno.get("promedio"))
+
+# Ejercicio 2
+
+# producto = {
+#     "nombre": "Ketchup",
+#     "precio": 1500,
+#     "stock": 50
+# }
+
+# producto["stock"] = 60
+
+# print(producto.get("stock"))
+
+# Ejercicio 3
+
+# juego = {
+#     "nombre": "Batman Lego",
+#     "fecha": 2008,
+#     "stock": 2,
+#     "consola": "ps2"
+# }
+
+# for clave, valor in juego.items():
+#     print(clave, valor)
+
+# Ejercicio 4
+
+# agenda = {
+#     "Ana": "1234",
+#     "Luis": "5678",
+#     "Juan": "9182"
+# }
+
+# nombre = input("Ingrese el nombre: ").capitalize()
+
+# if nombre in agenda:
+#     print(agenda[nombre])
+
+# Ejercicio 5
+
+# lst_alumnos = [
+#     {"nombre": "Diego", "promedio": 6.7},
+#     {"nombre": "Daniel", "promedio": 6.9},
+#     {"nombre": "Alexis", "promedio": 6.5},
+#     {"nombre": "Fernando", "promedio": 6},
+#     {"nombre": "Matias", "promedio": 5.5}
+# ]
+
+# for i in lst_alumnos:
+#     print(i)
+    
+# Mini desafio
+
+# productos = [
+#     {"nombre": "Ketchup", "precio": 1500, "stock": 50},
+#     {"nombre": "Mayonesa", "precio": 1600, "stock": 35},
+#     {"nombre": "Mostaza", "precio": 1300, "stock": 80}
+# ]
+
+# m_caro = 0
+# m_barato = 999999
+
+# nombre_caro = " "
+# nombre_barato = " "
+
+# suma_precios = 0
+
+# for producto in productos:
+    
+#     precio = producto["precio"]
+    
+#     suma_precios += precio
+    
+#     if precio > m_caro:
+#         m_caro = precio
+#         nombre_caro = producto["nombre"]
+    
+#     if precio < m_barato:
+#         m_barato = precio
+#         nombre_barato = producto["nombre"]
+
+# promedio = suma_precios / len(productos)
+
+# print(f"Producto mas caro: {nombre_caro} - ${m_caro}")
+# print(f"Producto mas barato: {nombre_barato} - ${m_barato}")
+# print(f"Promedio precios: ${round(promedio, 1)}")
+
+# Mini prueba
+# Pregunta 1
+
+# auto = {
+#     "marca": "Kuruma",
+#     "modelo": "Blindado",
+#     "año": 2005
+# }
+
+# for clave, value in auto.items():
+#     print(clave, value)
+    
+# Pregunta 2
+
+# agenda = [
+#     {"nombre": "Luis", "numero": 1234},
+#     {"nombre": "Ana", "numero": 5678},
+#     {"nombre": "Deadpool", "numero": 9021}
+# ]
+
+# nombre = input("Ingrese el nombre de la persona: ").capitalize()
+
+# for persona in agenda:
+#     if nombre in persona["nombre"]:
+#         print(persona.get("numero"))
+
+# Pregunta 3
+
+# alumnos = [
+#     {"nombre": "Diego", "promedio": 6.8, "carrera": "Analista"},
+#     {"nombre": "Daniel", "promedio": 6.6, "carrera": "Analista"},
+#     {"nombre": "Alexis", "promedio": 2.1, "carrera": "Analista"},
+#     {"nombre": }
+# ]
+
+# for alumno in alumnos:
+#     if alumno["promedio"] >= 4:
+#         print(f"El alumno {alumno["nombre"]} esta aprobado")
+#     else:
+#         print(f"El alumno {alumno["nombre"]} esta reprobado")
+
+# Reto final del dia
+
+# import time
+
+# alumnos = [
+#     {"nombre": "Diego", "promedio": 6.9},
+#     {"nombre": "Daniel", "promedio": 6.7},
+#     {"nombre": "Alexis", "promedio": 2.1},
+#     {"nombre": "Matias", "promedio": 5.8},
+#     {"nombre": "Fernando", "promedio": 3.8}
+# ]
+
+# m_alumno = " "
+# p_alumno = " "
+
+# m_promedio = 0
+# p_promedio = 999
+
+# suma_promedios = 0
+
+# for alumno in alumnos:
+#     if alumno["promedio"] > m_promedio:
+#         m_promedio = alumno["promedio"]
+#         m_alumno = alumno["nombre"]
+    
+#     if alumno["promedio"] < p_promedio:
+#         p_promedio = alumno["promedio"]
+#         p_alumno = alumno["nombre"]
+    
+#     if alumno["promedio"] > 4:
+#         print(f"El alumno {alumno['nombre']} esta aprobado con un promedio de {alumno['promedio']}")
+#     else:
+#         print(f"El alumno {alumno['nombre']} esta reprobado con un promedio de {alumno['promedio']}")
+    
+#     time.sleep(2)
+    
+#     suma_promedios += alumno["promedio"]
+
+# promedio_general = suma_promedios / len(alumnos)
+
+# print(f"El mejor alumno fue {m_alumno}, con un promedio de {m_promedio}")
+# time.sleep(2)
+
+# print(f"El peor alumno fue {p_alumno}, con un promedio de {p_promedio}")
+# time.sleep(2)
+
+# print(f"El promedio general fue {round(promedio_general, 1)}")
