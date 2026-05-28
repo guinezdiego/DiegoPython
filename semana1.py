@@ -1020,3 +1020,5 @@
 # time.sleep(2)
 
 # print(f"El promedio general fue {round(promedio_general, 1)}")
+
+# Dia 7
