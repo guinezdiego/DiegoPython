@@ -346,3 +346,132 @@
 # print(f"El total de cuadros vistos es: {vistos}")
 # print(f"El total de cuadros no vistos es: {noVistos}")
 
+
+# def sumar():
+#     n1 = int(input("Ingrese un numero: "))
+#     n2 = int(input("Ingrese otro numero: "))
+#     return n1 + n2
+
+# res = sumar()
+# print(f"El resultado es: {res}")
+
+# def saludo(name):
+#     print(f"Hola {name}")
+
+# saludo("Wipig")
+
+# def halfPrice(precio):
+#     print(f"El precio es: {precio / 2}")
+
+# p = int(input("Ingrese el precio: "))
+
+# halfPrice(p)
+
+# def sumar(n1, n2):
+#     return n1 + n2
+
+# num1 = int(input("Ingrese un numero: "))
+# num2 = int(input("Ingrese otro numero: "))
+
+# print(f"El resultado de la suma es: {sumar(num1, num2)}")
+
+
+
+# Crear una calculadora con las 4 operaciones basicas
+
+# def sumar(n1, n2):
+#     return n1 + n2
+
+# def restar(n1, n2):
+#     return n1 - n2
+
+# def multi(n1, n2):
+#     return n1 * n2
+
+# def divi(n1, n2):
+#     return n1 / n2
+
+# def calculadora():
+#     while True:
+#         print("1.- Sumar")
+#         print("2.- Restar")
+#         print("3.- Multiplicar")
+#         print("4.- Dividir")
+#         print("5.- Salir")
+#         try:
+#             op = int(input("Ingrese una opcion: "))
+
+#             match op:
+#                 case 1:
+#                     while True:
+#                         try:
+#                             num1 = int(input("Ingrese un numero: "))
+#                             num2 = int(input("Ingrese otro numero: "))
+#                             print(f"La suma total es: {sumar(num1, num2)}")
+#                             break
+#                         except ValueError as Er:
+#                             print("Solo debes ingresar numeros enteros")
+#                             print(Er)
+#                 case 2:
+#                     while True:
+#                         try:
+#                             num1 = int(input("Ingrese un numero: "))
+#                             num2 = int(input("Ingrese otro numero: "))
+#                             print(f"La resta total es: {restar(num1, num2)}")
+#                             break
+#                         except ValueError as Er:
+#                             print("Solo debes ingresar numeros enteros")
+#                             print(Er)
+#                 case 3:
+#                     while True:
+#                         try:
+#                             num1 = int(input("Ingrese un numero: "))
+#                             num2 = int(input("Ingrese otro numero: "))
+#                             print(f"La multiplicacion total es: {multi(num1, num2)}")
+#                             break
+#                         except ValueError as Er:
+#                             print("Solo debes ingresar numeros enteros")
+#                             print(Er)
+#                 case 4:
+#                     while True:
+#                         try:
+#                             num1 = int(input("Ingrese un numero: "))
+#                             num2 = int(input("Ingrese otro numero: "))
+
+#                             while num2 == 0:
+#                                 print("No se puede dividir por 0")
+#                                 num2 = int(input("Ingrese otro numero: "))
+
+#                             print(f"La division total es: {divi(num1, num2)}")
+#                             break
+#                         except ValueError as Er:
+#                             print("Solo debes ingresar numeros enteros")
+#                             print(Er)
+#                 case 5:
+#                     print("Saliendo del sistema")
+#                     break
+#                 case _:
+#                     print("Opcion invalida")
+#         except ValueError as Er:
+#             print("Solo debes ingresar numeros enteros")
+#             print(Er)
+# calculadora()
+
+
+# lista = [1, 2, 3, 4, 5]
+
+# for i in lista:
+#     print(i * 2)
+
+# pokemons = ["Evee", "Vaporeon", "Psyduck", "Charizad"]
+
+# for i in pokemons:
+#     print(i.upper())
+
+# frutas = ["Manzana", "Uva", "Pera", "Limon", "Platano"]
+
+# for i in frutas:
+#     if i[-1] == "a":
+#         print(f"La fruta {i} termina con a")
+#     else:
+#         print(f"La fruta {i} no termina con a")
