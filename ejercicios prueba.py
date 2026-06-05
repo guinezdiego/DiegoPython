@@ -475,3 +475,95 @@
 #         print(f"La fruta {i} termina con a")
 #     else:
 #         print(f"La fruta {i} no termina con a")
+
+# nombres = ["Diego", "Matias", "Fernando"]
+# apellidos = ["Mussolini", "Hitler","Nigger"]
+
+# for i in range(len(nombres)):
+#     print(nombres[i], apellidos[i])
+
+# no = input("Agregue un nombre: ")
+# ap = input("Agregue un apellido: ")
+
+# nombres.append(no)
+# apellidos.append(ap)
+
+# for i in range(len(nombres)):
+#     print(nombres[i], apellidos[i])
+
+# juguetes = ["yo-yo", "tetris"]
+
+# def mostrar():
+#     c = 1
+#     for j in juguetes:
+#         print(f"El juguete {c} es: {j}")
+#         c += 1
+#     print("-" * 20)
+
+# def actualizar():
+#     mostrar()
+#     act = int(input("Ingrese el juguete a actualizar: "))
+#     new_toy = input("Ingrese el nuevo juguete")
+#     juguetes[act - 1] = new_toy
+
+# def eliminar():
+#     mostrar()
+#     eliminar = int(input("Que juguete desea eliminar: "))
+#     juguetes.pop(eliminar - 1)
+#     print("Juguete eliminado")
+
+# def agregar():
+#     mostrar()
+#     toy = input("Ingrese el juguete: ")
+#     juguetes.append(toy)
+
+# def menuJuguetes():
+#     while True:
+#         print("1.- Agregar juguete")
+#         print("2.- Eliminar juguete")
+#         print("3.- Actualizar juguete")
+#         print("4.- Mostrar juguetes")
+#         print("5.- Salir")
+#         try:
+#             op = int(input("Ingrese su opcion: "))
+#             match op:
+#                 case 1:
+#                     agregar()
+#                 case 2:
+#                     eliminar()
+#                 case 3:
+#                     actualizar()
+#                 case 4:
+#                     mostrar()
+#                 case 5:
+#                     print("Saliendo del sistema")
+#                     break
+#                 case _:
+#                     print("Opcion invalida")
+#         except ValueError as Er:
+#             print("Debes ingresar numeros enteros")
+#             print(Er)
+
+# menuJuguetes()
+# pares = []
+# impares = []
+
+# def validar_lista_numeros():
+#     lista = input("Ingrese una lista de numeros separados por espacios: ")
+#     lista_numeros = lista.split()   
+
+#     for i in lista_numeros:
+#         if int(i) % 2 == 0:
+#             pares.append(i)
+#         else:
+#             impares.append(i)
+    
+#     print(f"Los numeros pares son: {pares}")
+#     print(f"Los numeros impares son: {impares}")
+
+# validar_lista_numeros()
+
+
+# lista = [3, 56, 77, 67, 1]
+# lista.sort(reverse = True)
+# print(lista)
