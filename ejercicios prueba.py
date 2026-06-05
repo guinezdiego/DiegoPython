@@ -16,7 +16,7 @@
 #         break
 #     else:
 #         print("El numero debe se mayor a 10")
-        
+
 
 # Ejercicio 2
 # Crea una contraseña fija
@@ -80,6 +80,7 @@
 
 
 
+
 # Ejercicio 6
 
 # Pida la edad del usuario
@@ -112,12 +113,32 @@
 
 
 
+
+
+
+
+
+
+
+
 # Ejercicio 8
 
 # Crea un menu con: 1.- Saludar, 2.- Decir adios, 3.- Salir
 # Usando while True
 # Mostrar "Hola", "Adios" y "Saliendo del sistema" segun la opcion
 # Si escribe letras mostrar el error
+
+# while True:
+    
+#     print
+
+
+
+
+
+
+
+
 
 
 
@@ -133,6 +154,33 @@
 # Pida numeros infinitamente
 # El Usuario puede escribir "fin" para terminar el programa
 # Al final mostrar cuantos numeros ingreso y la suma total de ellos
+
+# cantidad = 0
+# suma = 0
+
+# while True:
+    
+#     dato = input("Ingrese un numero o escriba fin: ")
+    
+#     if dato == "fin":
+#         print("Saliendo del sistema")
+#         break
+    
+#     try:
+#         numero = int(dato)
+        
+#         cantidad += 1
+#         suma += numero
+    
+#     except ValueError as er:
+
+
+
+
+
+
+
+
 
 
 
@@ -151,6 +199,24 @@
 # Seguir preguntando hasta que ambos sean correctos
 # Si falla, mostrar "Datos incorrectos"
 # Si acierta, mostrar "Acceso permitido"
+
+# admin = "Hoplita"
+# contraseña = "Wipig"
+
+# while True:
+#     usuario = input("Ingrese el usuario: ")
+#     clave = input("Ingrese la contraseña: ")
+    
+#     if usuario == admin and clave == contraseña:
+#         print("Bienvenido")
+#         break
+#     else:
+#         print("Datos incorrectos")
+
+
+
+
+
 
 
 
@@ -176,11 +242,18 @@
 
 
 
+
+
 # Ejercicio 12
 
 # Haz una calculadora simple
 # Con: 1.- Sumar, 2.- Restar, 3.- Multiplicar, 4.- Dividir y 5.- Salir
 # Usar while True, validar numeros con try-except y usar break para salir
+
+
+
+
+
 
 
 
@@ -197,9 +270,67 @@
 # Haz un cajero automatico basico
 # Con un saldo inicial de $100000
 # Con un menu para ver saldo, depositar, retirar y salir
-# No permitir reitrar mas dinero del disponible
+# No permitir retirar mas dinero del disponible
 # Validar numeros con try-except
 # Repetir hasta salir
+
+saldo = 100000
+
+while True:
+    print("1.- Ver saldo")
+    print("2.- Depositar")
+    print("3.- Retirar")
+    print("4.- Salir")
+    
+    try:
+        op = int(input("Ingrese su opcion: "))
+        match op:
+            case 1:
+                print(f"El saldo total es de: {saldo}")
+            case 2:
+                monto = int(input("Ingrese el monto a depositar: "))
+                saldo += monto
+                print(f"El saldo actual es de: {saldo}")
+            case 3:
+                retiro = int(input("Ingrese el monto a retirar: "))
+                if retiro > saldo:
+                    print("Saldo insuficiente")
+                else:
+                    saldo -= retiro
+                    print(f"El saldo actual es de: {saldo}")
+            case 4:
+                print("Saliendo del sistema")
+                break
+            case _:
+                print("Opcion invalida")
+    except ValueError as er:
+        print("Ingrese solo numeros enteros")
+        print(f"Error {er}")
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # deuda = 100000
 # op = 0

@@ -1022,3 +1022,24 @@
 # print(f"El promedio general fue {round(promedio_general, 1)}")
 
 # Dia 7
+# "w" == escribir
+# "r" == leer
+# "a" == agregar
+# Crear archivo con alumnos
+
+# with open("alumnos.txt", "a") as archivo:
+    
+#     nombre = input("Ingrese un nombre: ")
+    
+#     archivo.write(nombre + "\n")
+
+# print("Alumno guardado")
+
+# Leer a los alumnos
+
+# with open("alumnos.txt", "r") as archivo:
+    
+#     for linea in archivo:
+#         print(linea.strip())
+
+
