@@ -104,7 +104,16 @@
 # Validar con try-except
 # Mostrar la tabla de multiplicar de ese numero del 1 al 10
 
-
+# while True:
+#     try:
+#         num = int(input("Ingrese un numero: "))
+        
+#         for i in range(1, 11):
+#             print(f"{num} x {i} = {num * i}")
+            
+#     except ValueError as Er:
+#         print("Debes ingresar numeros enteros")
+#         print(Er)
 
 
 
@@ -129,12 +138,24 @@
 # Si escribe letras mostrar el error
 
 # while True:
-    
-#     print
-
-
-
-
+#     print("1.- Saludar")
+#     print("2.- Despedirse")
+#     print("3.- Saliendo")
+#     try:
+#         op = int(input("Ingrese una opcion: "))
+#         match op:
+#             case 1:
+#                 print("Hola weko")
+#             case 2:
+#                 print("Adios autista")
+#             case 3:
+#                 print("Saliendo del sistema")
+#                 break
+#             case _:
+#                 print("Opcion invalida")
+#     except ValueError as Er:
+#         print("Debes ingresar solo numeros enteros")
+#         print(Er)
 
 
 
@@ -155,25 +176,27 @@
 # El Usuario puede escribir "fin" para terminar el programa
 # Al final mostrar cuantos numeros ingreso y la suma total de ellos
 
-# cantidad = 0
+# cantidad_numeros = 0
 # suma = 0
 
 # while True:
-    
-#     dato = input("Ingrese un numero o escriba fin: ")
-    
-#     if dato == "fin":
-#         print("Saliendo del sistema")
-#         break
-    
 #     try:
-#         numero = int(dato)
+#         num = input("Ingrese un numero: ")
         
-#         cantidad += 1
-#         suma += numero
-    
-#     except ValueError as er:
+#         if num == "fin":
+#             print("Programa terminado")
+#             break
+        
+#         num = int(num)
+#         cantidad_numeros += 1
+#         suma += num
+#     except ValueError as Er:
+#         print("Solo ingresar numeros enteros")
+#         print(Er)
 
+# print(f"La cantidad de numeros que ingreso fue: {cantidad_numeros}")
+# print(f"La suma total de ellos es: {suma}")
+        
 
 
 
@@ -200,22 +223,11 @@
 # Si falla, mostrar "Datos incorrectos"
 # Si acierta, mostrar "Acceso permitido"
 
-# admin = "Hoplita"
-# contraseña = "Wipig"
+# user = "Hoplita"
+# password = "Wipig"
 
 # while True:
 #     usuario = input("Ingrese el usuario: ")
-#     clave = input("Ingrese la contraseña: ")
-    
-#     if usuario == admin and clave == contraseña:
-#         print("Bienvenido")
-#         break
-#     else:
-#         print("Datos incorrectos")
-
-
-
-
 
 
 
@@ -233,6 +245,25 @@
 # Mostrar si es par o impar
 # Y mostrar si es positivo o negativo
 
+# while True:
+#     try:
+#         num = int(input("Ingrese un numero: "))
+        
+#         if num % 2 == 0:
+#             print("El numero es par")
+#         else:
+#             print("El numero es impar")
+        
+#         if num >= 1:
+#             print("El numero es positivo")
+#         elif num == 0:
+#             print("El numero es 0")
+#         else:
+#             print("El numero es negativo")
+#     except ValueError as Er:
+#         print("Solo ingresar numeros enteros")
+#         print(Er)
+    
 
 
 
@@ -274,41 +305,46 @@
 # Validar numeros con try-except
 # Repetir hasta salir
 
-saldo = 100000
+# saldo = 100000
 
-while True:
-    print("1.- Ver saldo")
-    print("2.- Depositar")
-    print("3.- Retirar")
-    print("4.- Salir")
-    
-    try:
-        op = int(input("Ingrese su opcion: "))
-        match op:
-            case 1:
-                print(f"El saldo total es de: {saldo}")
-            case 2:
-                monto = int(input("Ingrese el monto a depositar: "))
-                saldo += monto
-                print(f"El saldo actual es de: {saldo}")
-            case 3:
-                retiro = int(input("Ingrese el monto a retirar: "))
-                if retiro > saldo:
-                    print("Saldo insuficiente")
-                else:
-                    saldo -= retiro
-                    print(f"El saldo actual es de: {saldo}")
-            case 4:
-                print("Saliendo del sistema")
-                break
-            case _:
-                print("Opcion invalida")
-    except ValueError as er:
-        print("Ingrese solo numeros enteros")
-        print(f"Error {er}")
+# while True:
+#     print("1.- Ver saldo")
+#     print("2.- Depositar dinero")
+#     print("3.- Retirar dinero")                
+#     print("4.- Salir del sistema")
+#     try:
+#         op = int(input("Ingrese una opcion: "))
+#         match op:
+#             case 1:
+#                 print(f"Su saldo total es de {saldo}")
+#             case 2:
+#                 dep = int(input("Ingrese el monto a depositar: "))
                 
-
-
+#                 while dep < 1:
+#                     print("El deposito debe ser mayor a 0")
+#                     dep = int(input("Ingrese el monto a depositar: "))
+                
+#                 saldo += dep
+#                 print(f"El saldo actual es de {saldo}")
+#             case 3:
+#                 retirar = int(input("Ingrese el monto a retirar: "))
+                
+#                 while retirar > saldo:
+#                     print("No puedes retirar mas de lo que tienes")
+#                     retirar = int(input("Ingrese el monto a retirar: "))
+                    
+                    
+#                 saldo -= retirar
+#                 print(f"El saldo actual es: {saldo}")
+#             case 4:
+#                 print("Saliendo del sistema")
+#                 break
+#             case _:
+#                 print("Opcion invalida")
+#     except ValueError as er:
+#         print("Debes ingresar numeros enteros")
+#         print(er)
+        
 
 
 
