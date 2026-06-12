@@ -750,7 +750,7 @@ productosDicc[4] = {"nombre": "Piña", "precio": 3500}
 # for producto in productosDicc.values():
 #     suma += producto["precio"]
 # print(f"La suma total es: {suma}")
-total = 0
+
 carrito = []
 
 def agregarProducto():
@@ -758,39 +758,60 @@ def agregarProducto():
    nombre = input()
    print("cual es el precio?")
    precio = int(input())
-   nuevoKey=list(productosDicc.keys())[-1]
-   productosDicc[nuevoKey+1]= {"nombre": nombre, "precio": precio}
+   nuevoKey=list(productosDicc.keys())
+   nuevoKey.sort()
+   productosDicc[nuevoKey[-1]+1]= {"nombre": nombre, "precio": precio}
 def MostrarProducto():
    for key, producto in productosDicc.items():
     print(f"{key} .{producto}")
 def eliminarProducto():
    MostrarProducto()
-   borrar=int(input("Cual Producto borrará?: "))
-   del productosDicc[borrar]
+   try:
+      borrar=int(input("Cual Producto borrará?: "))
+      if borrar in productosDicc.keys():
+         del productosDicc[borrar]
+      else:
+         print("No existe")
+   except Exception as e:
+      print("Erro", e)
 def actualizarProducto():
    MostrarProducto()
-   num=int(input("Que producto desea actualizar?: "))
-   if num in productosDicc.keys():
-        nombre = input("Cual es el nombre nuevo: ")
-        precio = int(input(""))
-        productosDicc[num]={"nombre": nombre, "precio": precio}
-   else:
-      print("No existe")
+   try:
+      num=int(input("Que producto desea actualizar?: "))
+      if num in productosDicc.keys():
+         nombre = input("Cual es el nombre nuevo: ")
+         precio = int(input(""))
+         productosDicc[num]={"nombre": nombre, "precio": precio}
+      else:
+         print("No existe")
+   except Exception as e:
+      print("Error", e)
 
 def comprar():
-    MostrarProducto()
-    compra = int(input("Ingrese el producto a comprar: "))
-    if compra in productosDicc.keys():
-        carrito.append(productosDicc[compra])
-        print(f"Producto agregado al carrito")
-    else:
-        print("Producto no encontrado")
-       
+   while True:
+      MostrarProducto()
+      try:  
+         compra = int(input("Ingrese el producto a comprar (0 para salir): "))
+         if compra == 0:
+            break
+         if compra in productosDicc.keys():
+            carrito.append(productosDicc[compra])
+            print(f"Producto agregado al carrito")
+         else:
+            print("Producto no encontrado")
+      except Exception as e:
+         print("Error", e)
+      
 def boleta_salir():
-    MostrarProducto()
-    for producto in productosDicc.values():
-       total += producto["precio"]
-    print(f"El total a pagar es: {total}")
+   total = 0
+   print("-" * 30, "0", "-" * 30)
+   for prod in carrito:
+      print(f"{prod["nombre"]}___${prod["precio"]}")
+      total += prod["precio"]
+   print("-" * 30, "0", "-" * 30)
+   print(f"El total neto es: {total} y el IVA es: {total * 0.19}")
+   print("-" * 30, "0", "-" * 30)
+   print(f"El total a pagar es: {total * 1,19}")
 
 def vegetalesMenuDiccionario():
    while True:
