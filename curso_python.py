@@ -106,3 +106,61 @@ z = x <= y
 
 # Operadores logicos
 
+# El operador "and" devuelve "True" si ambas declaraciones son verdaderas
+
+x = True
+y = True
+
+resultado = x and y
+
+# Si uno de los valores es falso devolvera "False"
+
+edad = 20
+tiene_licencia = True
+resultado = edad >= 18 and tiene_licencia
+
+x1 = True
+x2 = False
+x3 = x1 and x2
+
+# El operador "or" devuelve "True" si solo una declaracion es verdadera
+# El operador "not" devuelve el valor contrario
+
+b1 = 2
+b2 = 3
+b3 = (b1 * b2) > (b1 + b2)
+
+a = True
+b = False
+c = False
+resultado = (a or b) and not c
+
+b1 = True
+b2 = True
+b3 = False
+b4 = b1 and b2 and (not b3)
+
+num = 6
+es_positivo = num > 0
+es_par = num % 2 == 0
+resultado = es_positivo and es_par
+
+# Enfoque mas directo
+resultado = num > 0 and num % 2 == 0
+
+num = -4
+es_negativo_o_impar = num < 0 or num % 2 != 0
+
+edad = int(input("Ingrese su edad: "))
+tiene_licencia = input("si/no: ").lower() == "si"
+tiene_seguro = input("si/no: ").lower() == "si"
+resultado = edad >= 18 and tiene_licencia and tiene_seguro
+
+esta_soleado = input("si/no: ").lower() == "si"
+temperatura = float(input("Ingrese la temperatura: "))
+velocidad_viento = float(input("Ingrese la velocidad del viento: "))
+temperatura_agua = float(input("Ingrese la temperatura del agua: "))
+
+can_hiking = esta_soleado and temperatura > 15 and velocidad_viento < 20
+can_swimming = esta_soleado and temperatura > 20 and temperatura_agua > 18
+cannot_outside = esta_soleado == False or temperatura < 10 or velocidad_viento > 30
