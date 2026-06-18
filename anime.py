@@ -44,7 +44,34 @@ def actualizarAnime():
         print("Error", e)
 
 def ordenarCapitulos():
-    for anime in animes.items():
-       print(anime)
-
-ordenarCapitulos()
+    ordenados = sorted(animes.items())
+    for key, value in ordenados:
+        print(f"{value['nombre']} - {value['capitulos']} capitulos")
+        
+while True:
+    print("1.- mostrar animes")
+    print("2.- Agregar anime")
+    print("3.- Eliminar anime")
+    print("4.- Actualizar anime")
+    print("5.- Mostrar por cantidad capitulos")
+    print("6.- Salir del sistema")
+    try:
+        op = int(input("Ingrese su opcion: "))
+        match op:
+            case 1:
+                mostrarAnime()
+            case 2:
+                agregarAnime()
+            case 3:
+                eliminarAnime()
+            case 4:
+                actualizarAnime()
+            case 5:
+                ordenarCapitulos()
+            case 6:
+                print("Saliendo del sistema")
+                break
+            case _:
+                print("Opcion invalida")
+    except ValueError as er:
+        print(f"Error. {er}")

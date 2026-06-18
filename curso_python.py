@@ -164,3 +164,4 @@ temperatura_agua = float(input("Ingrese la temperatura del agua: "))
 can_hiking = esta_soleado and temperatura > 15 and velocidad_viento < 20
 can_swimming = esta_soleado and temperatura > 20 and temperatura_agua > 18
 cannot_outside = esta_soleado == False or temperatura < 10 or velocidad_viento > 30
+
