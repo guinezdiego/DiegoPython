@@ -737,13 +737,13 @@
 
 # Diccionario
 
-productosDicc = {
-    1:{"nombre": "Maracuya", "precio": 3000},
-    2:{"nombre": "Pera", "precio": 1500},
-    3:{"nombre": "Cebolla", "precio": 1200}
-}
+# productosDicc = {
+#     1:{"nombre": "Maracuya", "precio": 3000},
+#     2:{"nombre": "Pera", "precio": 1500},
+#     3:{"nombre": "Cebolla", "precio": 1200}
+# }
 
-productosDicc[4] = {"nombre": "Piña", "precio": 3500}
+# productosDicc[4] = {"nombre": "Piña", "precio": 3500}
 
 # suma = 0
 
@@ -751,95 +751,181 @@ productosDicc[4] = {"nombre": "Piña", "precio": 3500}
 #     suma += producto["precio"]
 # print(f"La suma total es: {suma}")
 
-carrito = []
+# carrito = []
 
-def agregarProducto():
-   print("Cual es el nombre del producto?")
-   nombre = input()
-   print("cual es el precio?")
-   precio = int(input())
-   nuevoKey=list(productosDicc.keys())
-   nuevoKey.sort()
-   productosDicc[nuevoKey[-1]+1]= {"nombre": nombre, "precio": precio}
-def MostrarProducto():
-   for key, producto in productosDicc.items():
-    print(f"{key} .{producto}")
-def eliminarProducto():
-   MostrarProducto()
-   try:
-      borrar=int(input("Cual Producto borrará?: "))
-      if borrar in productosDicc.keys():
-         del productosDicc[borrar]
-      else:
-         print("No existe")
-   except Exception as e:
-      print("Erro", e)
-def actualizarProducto():
-   MostrarProducto()
-   try:
-      num=int(input("Que producto desea actualizar?: "))
-      if num in productosDicc.keys():
-         nombre = input("Cual es el nombre nuevo: ")
-         precio = int(input(""))
-         productosDicc[num]={"nombre": nombre, "precio": precio}
-      else:
-         print("No existe")
-   except Exception as e:
-      print("Error", e)
+# def agregarProducto():
+#    print("Cual es el nombre del producto?")
+#    nombre = input()
+#    print("cual es el precio?")
+#    precio = int(input())
+#    nuevoKey=list(productosDicc.keys())
+#    nuevoKey.sort()
+#    productosDicc[nuevoKey[-1]+1]= {"nombre": nombre, "precio": precio}
+# def MostrarProducto():
+#    for key, producto in productosDicc.items():
+#     print(f"{key} .{producto}")
+# def eliminarProducto():
+#    MostrarProducto()
+#    try:
+#       borrar=int(input("Cual Producto borrará?: "))
+#       if borrar in productosDicc.keys():
+#          del productosDicc[borrar]
+#       else:
+#          print("No existe")
+#    except Exception as e:
+#       print("Erro", e)
+# def actualizarProducto():
+#    MostrarProducto()
+#    try:
+#       num=int(input("Que producto desea actualizar?: "))
+#       if num in productosDicc.keys():
+#          nombre = input("Cual es el nombre nuevo: ")
+#          precio = int(input(""))
+#          productosDicc[num]={"nombre": nombre, "precio": precio}
+#       else:
+#          print("No existe")
+#    except Exception as e:
+#       print("Error", e)
 
-def comprar():
-   while True:
-      MostrarProducto()
-      try:  
-         compra = int(input("Ingrese el producto a comprar (0 para salir): "))
-         if compra == 0:
-            break
-         if compra in productosDicc.keys():
-            carrito.append(productosDicc[compra])
-            print(f"Producto agregado al carrito")
-         else:
-            print("Producto no encontrado")
-      except Exception as e:
-         print("Error", e)
+# def comprar():
+#    while True:
+#       MostrarProducto()
+#       try:  
+#          compra = int(input("Ingrese el producto a comprar (0 para salir): "))
+#          if compra == 0:
+#             break
+#          if compra in productosDicc.keys():
+#             carrito.append(productosDicc[compra])
+#             print(f"Producto agregado al carrito")
+#          else:
+#             print("Producto no encontrado")
+#       except Exception as e:
+#          print("Error", e)
       
-def boleta_salir():
-   total = 0
-   print("-" * 30, "0", "-" * 30)
-   for prod in carrito:
-      print(f"{prod["nombre"]}___${prod["precio"]}")
-      total += prod["precio"]
-   print("-" * 30, "0", "-" * 30)
-   print(f"El total neto es: {total} y el IVA es: {total * 0.19}")
-   print("-" * 30, "0", "-" * 30)
-   print(f"El total a pagar es: {total * 1,19}")
+# def boleta_salir():
+#    total = 0
+#    print("-" * 30, "0", "-" * 30)
+#    for prod in carrito:
+#       print(f"{prod["nombre"]}___${prod["precio"]}")
+#       total += prod["precio"]
+#    print("-" * 30, "0", "-" * 30)
+#    print(f"El total neto es: {total} y el IVA es: {total * 0.19}")
+#    print("-" * 30, "0", "-" * 30)
+#    print(f"El total a pagar es: {total * 1,19}")
 
-def vegetalesMenuDiccionario():
-   while True:
-      try:
-         print("-"*20)
-         print("1.- Agregar Vegetal")
-         print("2.- Eliminar Vegetal")
-         print("3.- Actualizar Vegetal")
-         print("4.- Mostrar Vegetal")
-         print("5.- Comprar")
-         print("6.- Salir")
-         op=int(input("Seleccione una opcion: "))
-         match op:
-               case 1:
-                  agregarProducto()
-               case 2:
-                  eliminarProducto()
-               case 3:
-                  actualizarProducto()
-               case 4:
-                  MostrarProducto()
-               case 5:
-                  comprar()
-               case 6:
-                  boleta_salir()
-                  break
-               case _:
-                    print("Opcion invalida")  
-      except Exception as e:
-         print("Error:",e)
-vegetalesMenuDiccionario()
+# def vegetalesMenuDiccionario():
+#    while True:
+#       try:
+#          print("-"*20)
+#          print("1.- Agregar Vegetal")
+#          print("2.- Eliminar Vegetal")
+#          print("3.- Actualizar Vegetal")
+#          print("4.- Mostrar Vegetal")
+#          print("5.- Comprar")
+#          print("6.- Salir")
+#          op=int(input("Seleccione una opcion: "))
+#          match op:
+#                case 1:
+#                   agregarProducto()
+#                case 2:
+#                   eliminarProducto()
+#                case 3:
+#                   actualizarProducto()
+#                case 4:
+#                   MostrarProducto()
+#                case 5:
+#                   comprar()
+#                case 6:
+#                   boleta_salir()
+#                   break
+#                case _:
+#                     print("Opcion invalida")  
+#       except Exception as e:
+#          print("Error:",e)
+# vegetalesMenuDiccionario()
+
+pacientes = [
+   {"nombre": "Aquiles", "prevision": "Fonasa", "temperatura": 34.6, "grave": False}
+]
+precio = 25000
+
+def validTemp(t):
+   if t > 39:
+      return True
+   else:
+      return False
+
+def mostrarPaciente():
+   c = 1
+   for paciente in pacientes:
+      print(f"{c} .- {paciente}")
+      c += 1
+   print("-" * 30)
+
+def agregarPaciente():
+   nombre = input("Cual es el nombre del paciente: ")
+   while nombre == "" or len(nombre) < 9:
+      print("El nombre no debe estar vacio y debe tener mas de 8 letras")
+      nombre = input("Cual es el nombre del paciente: ")
+
+   prevision = input("Cual es la prevision del paciente: ")
+   while prevision.lower() not in ("fonasa", "isapre", "fodesa"):
+      print("Prevision invalida")
+      prevision = input("Cual es la prevision del paciente: ")
+
+   temperatura = float(input("Cual es la temperatura del paciente: "))
+
+   pacientes.append({"nombre": nombre, "prevision": prevision, "temperatura": temperatura, "grave": validTemp(temperatura)})
+
+def eliminarPaciente():
+   mostrarPaciente()
+   eliminado = int(input("Ingrese el paciente a eliminar: "))
+   pacientes.pop(eliminado - 1)
+   print("Paciente eliminado")
+
+def cobrarPaciente():
+   mostrarPaciente()
+   cobrar = int(input("A quien le va a cobrar?: "))
+   if pacientes[cobrar - 1]["prevision"] == "fonasa":
+      total = 25000 * 0.46
+   elif pacientes[cobrar - 1]["prevision"] == "isapre":
+      total = 25000 * 0.73
+   elif pacientes[cobrar - 1]["prevision"] == "fodesa":
+      total = 25000 * 0.875
+   else:
+      print("Prevision invalida")
+
+   print(f"El total a pagar es: {total}")
+
+def tomarTemperatura():
+   mostrarPaciente()
+   p = int(input("A que paciente le tomara la temperatura?: "))
+   t = float(input("Ingrese la temperatura nueva: "))
+   pacientes[p - 1]["temperatura"] = t
+   pacientes[p - 1]["grave"] = validTemp(t)
+
+while True:
+   try:
+      print("1.- Agregar paciente")
+      print("2.- Quitar paciente")
+      print("3.- Tomar temperatura")
+      print("4.- Cobrar paciente")
+      print("5.- Mostrar pacientes")
+      print("6.- Salir")
+      op = int(input("Ingrese su opcion: "))
+      match op:
+         case 1:
+            agregarPaciente()
+         case 2:
+            eliminarPaciente()
+         case 3:
+            tomarTemperatura()
+         case 4:
+            cobrarPaciente()
+         case 5:
+            mostrarPaciente()
+         case 6:
+            print("Saliendo del sistema")
+            break
+   except Exception as e:
+      print(f"Error, {e}")
