@@ -844,88 +844,179 @@
 #          print("Error:",e)
 # vegetalesMenuDiccionario()
 
-pacientes = [
-   {"nombre": "Aquiles", "prevision": "Fonasa", "temperatura": 34.6, "grave": False}
-]
-precio = 25000
+# pacientes = [
+#    {"nombre": "Aquiles", "prevision": "Fonasa", "temperatura": 34.6, "grave": False}
+# ]
+# precio = 25000
 
-def validTemp(t):
-   if t > 39:
-      return True
-   else:
-      return False
+# def validarEstados(pacientesHospitales):
+#    for p in pacientesHospitales:
+#       p["grave"] = validarEstados(p["temperatura"])
 
-def mostrarPaciente():
-   c = 1
-   for paciente in pacientes:
-      print(f"{c} .- {paciente}")
-      c += 1
-   print("-" * 30)
+# def validTemp(t):
+#    if t > 39:
+#       return True
+#    else:
+#       return False
 
-def agregarPaciente():
-   nombre = input("Cual es el nombre del paciente: ")
-   while nombre == "" or len(nombre) < 9:
-      print("El nombre no debe estar vacio y debe tener mas de 8 letras")
-      nombre = input("Cual es el nombre del paciente: ")
+# def mostrarPaciente():
+#    c = 1
+#    for paciente in pacientes:
+#       print(f"{c} .- {paciente}")
+#       c += 1
+#    print("-" * 30)
 
-   prevision = input("Cual es la prevision del paciente: ")
-   while prevision.lower() not in ("fonasa", "isapre", "fodesa"):
-      print("Prevision invalida")
-      prevision = input("Cual es la prevision del paciente: ")
+# def agregarPaciente():
+#    nombre = input("Cual es el nombre del paciente: ")
+#    while nombre == "" or len(nombre) < 9:
+#       print("El nombre no debe estar vacio y debe tener mas de 8 letras")
+#       nombre = input("Cual es el nombre del paciente: ")
 
-   temperatura = float(input("Cual es la temperatura del paciente: "))
+#    prevision = input("Cual es la prevision del paciente: ")
+#    while prevision.lower() not in ("fonasa", "isapre", "fodesa"):
+#       print("Prevision invalida")
+#       prevision = input("Cual es la prevision del paciente: ")
 
-   pacientes.append({"nombre": nombre, "prevision": prevision, "temperatura": temperatura, "grave": validTemp(temperatura)})
+#    temperatura = float(input("Cual es la temperatura del paciente: "))
 
-def eliminarPaciente():
-   mostrarPaciente()
-   eliminado = int(input("Ingrese el paciente a eliminar: "))
-   pacientes.pop(eliminado - 1)
-   print("Paciente eliminado")
+#    pacientes.append({"nombre": nombre, "prevision": prevision, "temperatura": temperatura, "grave": validTemp(temperatura)})
 
-def cobrarPaciente():
-   mostrarPaciente()
-   cobrar = int(input("A quien le va a cobrar?: "))
-   if pacientes[cobrar - 1]["prevision"] == "fonasa":
-      total = 25000 * 0.46
-   elif pacientes[cobrar - 1]["prevision"] == "isapre":
-      total = 25000 * 0.73
-   elif pacientes[cobrar - 1]["prevision"] == "fodesa":
-      total = 25000 * 0.875
-   else:
-      print("Prevision invalida")
+# def eliminarPaciente():
+#    mostrarPaciente()
+#    eliminado = int(input("Ingrese el paciente a eliminar: "))
+#    pacientes.pop(eliminado - 1)
+#    print("Paciente eliminado")
 
-   print(f"El total a pagar es: {total}")
+# def cobrarPaciente():
+#    mostrarPaciente()
+#    cobrar = int(input("A quien le va a cobrar?: "))
+#    if pacientes[cobrar - 1]["prevision"] == "fonasa":
+#       total = 25000 * 0.46
+#    elif pacientes[cobrar - 1]["prevision"] == "isapre":
+#       total = 25000 * 0.73
+#    elif pacientes[cobrar - 1]["prevision"] == "fodesa":
+#       total = 25000 * 0.875
+#    else:
+#       print("Prevision invalida")
 
-def tomarTemperatura():
-   mostrarPaciente()
-   p = int(input("A que paciente le tomara la temperatura?: "))
-   t = float(input("Ingrese la temperatura nueva: "))
-   pacientes[p - 1]["temperatura"] = t
-   pacientes[p - 1]["grave"] = validTemp(t)
+#    print(f"El total a pagar es: {total}")
 
-while True:
-   try:
-      print("1.- Agregar paciente")
-      print("2.- Quitar paciente")
-      print("3.- Tomar temperatura")
-      print("4.- Cobrar paciente")
-      print("5.- Mostrar pacientes")
-      print("6.- Salir")
-      op = int(input("Ingrese su opcion: "))
-      match op:
-         case 1:
-            agregarPaciente()
-         case 2:
-            eliminarPaciente()
-         case 3:
-            tomarTemperatura()
-         case 4:
-            cobrarPaciente()
-         case 5:
-            mostrarPaciente()
-         case 6:
-            print("Saliendo del sistema")
-            break
-   except Exception as e:
-      print(f"Error, {e}")
+# def tomarTemperatura():
+#    mostrarPaciente()
+#    p = int(input("A que paciente le tomara la temperatura?: "))
+#    t = float(input("Ingrese la temperatura nueva: "))
+#    pacientes[p - 1]["temperatura"] = t
+#    pacientes[p - 1]["grave"] = validTemp(t)
+#    print("Temperatura y estado actualizado")
+
+# def menuPacientes(): 
+#    while True:
+#       try:
+#          print("1.- Agregar paciente")
+#          print("2.- Quitar paciente")
+#          print("3.- Tomar temperatura")
+#          print("4.- Cobrar paciente")
+#          print("5.- Mostrar pacientes")
+#          print("6.- Salir")
+#          op = int(input("Ingrese su opcion: "))
+#          match op:
+#             case 1:
+#                agregarPaciente()
+#             case 2:
+#                eliminarPaciente()
+#             case 3:
+#                tomarTemperatura()
+#             case 4:
+#                cobrarPaciente()
+#             case 5:
+#                mostrarPaciente()
+#             case 6:
+#                print("Saliendo del sistema")
+#                break
+#             case _:
+#                print("Opcion invalida")
+#       except Exception as e:
+#          print(f"Error, {e}")
+
+
+# notas = [4.6, 7.0, 3.4, 6.6, 3.9, 6.8]
+
+# def mostrarPromedio(lst):
+#    total = 0
+#    c_notas = 0
+#    for nota in lst:
+#       total += nota
+#       c_notas += 1
+#    print(f"El promedio total es: {round(total / c_notas, 1)}")
+
+# mostrarPromedio(notas)
+
+# peliculas = [
+#    {"titulo": "Mad Max", "director": "Tom Hanks", "genero": "Romance", "año": 2012},
+#    {"titulo": "Jurassic Pork", "director": "Tom Cruise", "genero": "Suspenso", "año": 2000},
+#    {"titulo": "Son como niños", "director": "El Bananero", "genero": "Terror", "año": 2005},
+#    {"titulo": "Deadpool", "director": "Ryan Reynolds", "genero": "Comedia", "año": 2015},
+# ]
+# def agregarPelicula():
+#    titulo = input("Cual es el nombre de la pelicula?: ")
+#    director = input("Quien es el director?: ")
+#    genero = input("De que genero es?: ")
+#    año = int(input("Ingrese el año de estreno: "))
+
+#    peliculas.append({"titulo": titulo, "director": director, "genero": genero, "año": año})
+
+# def mostrarPeliculas():
+#    c = 1
+#    for pelicula in peliculas:
+#       print(f"{c}.- {pelicula}")
+#       c += 1
+#    print("-" * 30)
+
+# def eliminarPelicula():
+#    mostrarPeliculas()
+#    eliminado = int(input("Ingrese la pelicula a eliminar: "))
+#    peliculas.pop(eliminado - 1)
+#    print("Pelicula eliminada")
+
+# def actualizarPelicula():
+#    mostrarPeliculas()
+#    actualizado = int(input("Que pelicula desea actualizar?: "))
+#    titulo = input("Cual es el nombre de la pelicula?: ")
+#    director = input("Quien es el director?: ")
+#    genero = input("De que genero es?: ")
+#    año = int(input("Ingrese el año de estreno: "))
+
+#    peliculas[actualizado-1] = {"titulo": titulo, "director": director, "genero": genero, "año": año}
+
+# def mostrarTitulos():
+#    for pelicula in peliculas:
+#       print(pelicula["titulo"])
+
+# def menuPeliculas():
+#    while True:
+#       print("1.- Ingresar pelicula")
+#       print("2.- Eliminar pelicula")
+#       print("3.- Actualizar pelicula")
+#       print("4.- Mostrar peliculas")
+#       print("5.- Mostrar solo los titulos")
+#       print("6.- Salir")
+#       try:
+#          op = int(input("Ingrese su opcion: "))
+#          match op:
+#             case 1:
+#                agregarPelicula()
+#             case 2:
+#                eliminarPelicula()
+#             case 3:
+#                actualizarPelicula()
+#             case 4:
+#                mostrarPeliculas()
+#             case 5:
+#                mostrarTitulos()
+#             case 6:
+#                print("Saliendo del sistema")
+#                break
+#       except ValueError as er:
+#          print(f"Error, {er}")
+
+# menuPeliculas()
