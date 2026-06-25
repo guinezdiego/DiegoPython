@@ -1020,3 +1020,52 @@
 #          print(f"Error, {er}")
 
 # menuPeliculas()
+
+pinturas1 = [
+    {"color": "Verde"},
+    {"color": "rojo"},
+    {"color": "azul"}
+]
+pinturas2 = [
+    {"color": "negro"},
+    {"color": "purpura"},
+    {"color": "rosa"}
+]
+
+def buscarColor(lst, color):
+    for i in lst:
+        if color == i["color"]:
+            return "Disponible"      
+    return "NO existe"
+
+# c = input("Que color busca?: ")
+
+# print(buscarColor(pinturas2, c))
+
+
+def mostrarLista(lst):
+    c = 1
+    for p in lst:
+        print(f"{c}.- {p["color"]}")
+        c += 1
+
+nums = [20, 3, 7, 11, 67, 64, -8]
+
+def buscarNum(lst, num):
+    for n in lst:
+        if n == num:
+            return "Numero encontrado"
+    return "El numero no existe"
+
+# numero = int(input("Ingrese el numero a buscar: "))
+
+def quitarPintura(lst, color):
+    for p in lst:
+        if color == p["color"]:
+            lst.remove(p)
+            return "Color eliminado"
+    return "Color no encontrado"
+
+elemi = input("Ingrese al color a eliminar: ")
+
+print(quitarPintura(pinturas1, elemi))
