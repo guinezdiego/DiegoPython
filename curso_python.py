@@ -165,3 +165,139 @@ can_hiking = esta_soleado and temperatura > 15 and velocidad_viento < 20
 can_swimming = esta_soleado and temperatura > 20 and temperatura_agua > 18
 cannot_outside = esta_soleado == False or temperatura < 10 or velocidad_viento > 30
 
+has_license = True
+has_space = True
+has_experience = False
+
+can_sell_regular_pet = has_license or has_experience and has_space
+can_sell_exotic_pet = has_license and has_experience and has_space
+cannot_sell_any_pet = (not has_license and not has_experience) or not has_space
+
+print(f"Can sell regular pet: {can_sell_regular_pet}")
+print(f"Can sell exotic pet: {can_sell_exotic_pet}")
+print(f"Cannot sell any pet: {cannot_sell_any_pet}")
+
+
+# Toma de decisiones
+
+age = 20
+status = "Child"
+
+if age > 18:
+    status = "Adult"
+
+print(status)
+
+
+a = 15
+b = 12
+c = 0
+
+if a >= b and not b < 10:
+    c = 2
+
+c += 1
+print(f"c = {c}")
+
+
+a = 12
+b = 11
+c = 0
+
+if a < b or b >= 10:
+    c = 2
+
+c += 1
+print(f"c = {c}")
+
+
+age = 68
+status = "Ninguno"
+
+if age < 18:
+    status = "Joven"
+elif age >= 18 and age <= 65:
+    status = "Adulto"
+else:
+    status = "Old"
+    
+
+wind = float(input("Ingrese la velocidad del viento: "))
+status = "Nada"
+
+if wind < 8:
+    status = "Calm"
+elif wind >= 8 and wind <= 31:
+    status = "Breeze"
+elif wind >= 32 and wind <= 63:
+    status = "Gale"
+else:
+    status = "Storm"
+
+print(f"Status = {status}")
+
+
+temperatura = float(input("Ingrese la temperatura: "))
+clima = "Ninguno"
+
+if temperatura < 0:
+    clima = "Freezing"
+elif temperatura >= 0 and temperatura <= 15:
+    clima = "Cold"
+elif temperatura >= 16 and temperatura <= 25:
+    clima = "Mild"
+else:
+    clima = "Hot"
+
+print(f"Clima = {clima}")
+
+
+age = 18
+title = "None"
+allowed_to_drink = False
+
+if age >= 18:
+    title = "Adult"
+    if age >= 21:
+        allowed_to_drink = True
+    else:
+        allowed_to_drink = False
+else:
+    title = "Minor"
+    
+
+age = int(input("Ingrese su edad: "))
+with_parent = True/False
+message = "None"
+
+if age >= 18:
+    message = "You can watch any movie"
+else:
+    if age < 18:
+        if with_parent == True:
+            message = "You can watch PG-13 movies"
+        else:
+            message = "You can only watch G- rated movies"
+
+print(message)
+
+
+level = int(input("Ingrese su nivel: "))
+has_training = input("Entrenaste?: ")
+level_message = "None"
+
+if 1 <= level <= 5:
+    level_message = "Basic weapons only"
+elif 6 <= level <= 10:
+    if has_training == False:
+        level_message = "Need weapon training first"
+    else:
+        level_message = "Access to advanced weapons granted"
+elif level >= 11:
+    level_message = "Acces to all weapons granted"
+else:
+    level_message = "Invalid level"
+    
+print(level_message)
+
+
